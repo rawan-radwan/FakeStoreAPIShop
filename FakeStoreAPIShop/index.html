@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <!-- <button onclick="searchProducts()">Search</button> -->
+        </div>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+            <input type="number" id="minPrice" placeholder="Min Price">
+            <input type="number" id="maxPrice" placeholder="Max Price">
+            <select id="sortOrder">
+                <option value="asc">Sort by Price (Low to High)</option>
+                <option value="desc">Sort by Price (High to Low)</option>
+                <option value="alpha">Sort by Alphabet</option>
+            </select>
+            <button onclick="applyFilters()">Apply Filters</button>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cartItems">
+                <ul></ul>
+            </div>
+            <p>Total Products: <span id="cartTotalQuantity">0</span></p>
+            <p>Total Price: $<span id="totalPrice">0</span></p>
+        </div>
+        <div id="results"></div>
+        <div class="pagination">
+            <button onclick="prevPage()">Previous</button>
+            <span id="pageNumber">1</span>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
